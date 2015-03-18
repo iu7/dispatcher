@@ -11,15 +11,15 @@ namespace weather.Models
 {
     //UUDD 151700Z 01004MPS CAVOK 03/M08 Q1044 32010095 82010095 NOSIG
     [DataContract]
-    [Table(Name = "Users")]
-    public class METARinfo
+    [Table(Name = "IntarnationalForecast")]
+    public class METARabroad
     {
         [DataMember]
         [Column(IsPrimaryKey = true)]
         public int Id { get; set; }
         [DataMember]
         [Column]
-        public string ICAOcode { get; set; }
+        public string ICAO { get; set; }
         [DataMember]
         [Column]
         public DateTime DateAndTime { get; set; }
