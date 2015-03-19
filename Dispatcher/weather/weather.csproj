@@ -229,8 +229,11 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
-    <Content Include="Database\airport.sql" />
-    <Content Include="Database\UUEE погода.sql" />
+    <Content Include="Database\001 - Create Database.sql" />
+    <Content Include="Database\002 - Create Tables.sql" />
+    <Content Include="Database\004 - airport.sql" />
+    <Content Include="Database\003 - UUEE погода.sql" />
+    <Content Include="Database\005 - parameters.sql" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
