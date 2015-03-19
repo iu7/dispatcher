@@ -41,7 +41,7 @@ namespace weather.Controllers
 
             IQueryable<METARabroad> Query =
             from Wthr in WeatherData
-            where (Wthr.ICAO == ICAOcode)
+            where (Wthr.ICAOcode == ICAOcode)
             select Wthr;
             var ResWeather = Query.First();
             return ResWeather;
@@ -57,7 +57,7 @@ namespace weather.Controllers
         {
             info.Clouds = GetValue(info.Clouds, lang);
             info.Forecast = GetValue(info.Forecast, lang);
-            info.Visibility = GetValue(info.Visibility, lang);
+            //info.Visibility = GetValue(info.Visibility, lang);
             info.Weather = GetValue(info.Weather, lang);
         }
         public string METARtostring(METARcurrent item)
@@ -88,7 +88,7 @@ namespace weather.Controllers
 
         public string METARtostring(METARabroad item)
         {
-            string temp_res = item.ICAO + " " + item.DateAndTime.Day + item.DateAndTime.Hour + item.DateAndTime.Minute + "Z ";
+            string temp_res = item.ICAOcode + " " + item.DateAndTime.Day + item.DateAndTime.Hour + item.DateAndTime.Minute + "Z ";
             temp_res += item.WindDirection.ToString("D3") + item.WindSpeed.ToString("D2") + "MPS " +
                 item.Visibility + " " + item.Weather + " " + item.Clouds + " ";
             if (item.Temperature < 0)

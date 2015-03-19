@@ -19,7 +19,7 @@ namespace weather.Models
         public int Id { get; set; }
         [DataMember]
         [Column]
-        public string ICAO { get; set; }
+        public string ICAOcode { get; set; }
         [DataMember]
         [Column]
         public DateTime DateAndTime { get; set; }
