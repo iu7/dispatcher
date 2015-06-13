@@ -1638,7 +1638,7 @@ jQuery.extend({
 			isNode = elem.nodeType,
 
 			// See jQuery.data for more information
-			cache = isNode ? jQuery.cache : elem,
+cache = isNode ? jQuery.cache : elem,
 			id = isNode ? elem[ jQuery.expando ] : jQuery.expando;
 
 		// If there is already no cache entry for this object, there is no
@@ -9438,3 +9438,4 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 }
 
 })( window );
+);

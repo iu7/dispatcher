@@ -1,94 +1,93 @@
-USE [Weather]
-GO
+USE [Weather
+G
 
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'DZ','drizzle','морось')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'RA','rain','дождь')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'SN','snow','снег')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'SG','snow grains','снежные зёрна')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'PL','ice pellets','ледяной дождь')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'GS','small hail','мелкий град или снежная крупа')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'RASN','rain and snow','дождь со снегом')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'SNRA','snow and rain','снег с дождём')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'SHSN','snow showers','ливневый снег')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'SHRA','rain showers','ливневый дождь')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'SHGR','hail showers','град')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'FZRA','freezing rain','переохлаждённый дождь')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'FZDZ','freezing drizzle','переохлаждённая морось')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'TSRA','thunderstorm with rain','гроза с дождём')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'TSGR','thunderstorm with hail','гроза с градом')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'TSGS','thunderstorm with small hail','гроза со снежной крупой')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'TSSN','thunderstorm with snow','гроза со снегом')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'DS','dust storm', 'пыльная буря')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'SS','sandstorm','песчаная буря')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'FG','fog','туман')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'VCFG','fog in vicinity','туман в окрестности')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'FZFG','freezing fog','переохлаждённый туман')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'MIFG','shallow fog','поземный туман')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'PRFG','aerodrome partially covered by fog','аэродром частично покрыт туманом')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'BCFG','fog patches','туман местами')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'BR','mist','дымка')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'HZ','haze','мгла')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'FU','smoke','дым')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'DRSN','low drifting snow','снежный позёмок')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'DRSA','low drifting sand','песчаный позёмок')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'DRDU','low drifting dust','пыльный позёмок')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'DU','dust','пыль в воздухе (пыльная мгла)')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'BLSN','blowing snow','снежная низовая метель')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'BLDU','blowing dust','пыльная низовая метель')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'SQ','squall','шквал')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'IC','ice crystals','ледяные иглы')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'TS','thunderstorm','гроза(без осадков)')
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'DZ','drizzle','морось'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'RA','rain','дождь'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'SN','snow','снег'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'SG','snow grains','снежные зёрна'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'PL','ice pellets','ледяной дождь'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'GS','small hail','мелкий град или снежная крупа'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'RASN','rain and snow','дождь со снегом'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'SNRA','snow and rain','снег с дождём'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'SHSN','snow showers','ливневый снег'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'SHRA','rain showers','ливневый дождь'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'SHGR','hail showers','град'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'FZRA','freezing rain','переохлаждённый дождь'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'FZDZ','freezing drizzle','переохлаждённая морось'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'TSRA','thunderstorm with rain','гроза с дождём'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'TSGR','thunderstorm with hail','гроза с градом'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'TSGS','thunderstorm with small hail','гроза со снежной крупой'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'TSSN','thunderstorm with snow','гроза со снегом'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'DS','dust storm', 'пыльная буря'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'SS','sandstorm','песчаная буря'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'FG','fog','туман'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'VCFG','fog in vicinity','туман в окрестности'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'FZFG','freezing fog','переохлаждённый туман'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'MIFG','shallow fog','поземный туман'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'PRFG','aerodrome partially covered by fog','аэродром частично покрыт туманом'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'BCFG','fog patches','туман местами'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'BR','mist','дымка'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'HZ','haze','мгла'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'FU','smoke','дым'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'DRSN','low drifting snow','снежный позёмок'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'DRSA','low drifting sand','песчаный позёмок'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'DRDU','low drifting dust','пыльный позёмок'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'DU','dust','пыль в воздухе (пыльная мгла)'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'BLSN','blowing snow','снежная низовая метель'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'BLDU','blowing dust','пыльная низовая метель'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'SQ','squall','шквал'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'IC','ice crystals','ледяные иглы'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'TS','thunderstorm','гроза(без осадков)'
 
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'SKC','sky is clear','ясно')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'NSC','nil significant cloud','без существенной облачности ')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'FEW','few','незначительная облачность 1–2 октанта ')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'SCT','scattered','рассеянная или разбросанная облачность 3–4 октанта')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'BKN','broken','значительная или разорванная облачность  5–7 октантов')
-INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES(
-'OVC','overcast','сплошная облачность 8 октантов')
-
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'SKC','sky is clear','ясно'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'NSC','nil significant cloud','без существенной облачности '
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'FEW','few','незначительная облачность 1–2 октанта '
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'SCT','scattered','рассеянная или разбросанная облачность 3–4 октанта'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'BKN','broken','значительная или разорванная облачность  5–7 октантов'
+INSERT INTO [dbo].[Parameters] ([Item],[English],[Russian]) VALUES
+'OVC','overcast','сплошная облачность 8 октантов'
 
 GO
 
