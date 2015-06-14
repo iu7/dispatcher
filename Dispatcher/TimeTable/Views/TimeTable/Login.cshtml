@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<body class="metro">
+    <div style="background: url(@Url.Content("~/Content/pictures/uareg.jpg")) top left no-repeat; background-size: cover; height: 300px;">
+        <div class="container" style="padding: 50px 20px">
+            <h1 class="fg-white">Портал аэропорта - вход в систему</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="grid">
+            <div class="row">
+                <div class="span8">
+                    <p class="item-title">Логин (e-mail)</p>
+                    <div class="input-control text">
+                        <input type="text" value="" placeholder="Введите логин" />
+                        <button class="btn-clear"></button>
+                    </div>
+                    <p class="item-title">Пароль</p>
+                    <div class="input-control password">
+                        <input type="password" value="" placeholder="Введите пароль" />
+                        <button class="btn-reveal"></button>
+                    </div>
+                    <button class="large">Войти</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-dark">
+        <div class="container" style="padding: 5px 0;">
+            <div class="grid no-margin">
+                <div class="row no-margin">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

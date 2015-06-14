@@ -129,7 +129,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\TimeTableController.cs" />
+    <Compile Include="Controllers\TimeTableController.cs" />
+    <Compile Include="Models\Flight.cs" />
+    <Compile Include="Models\FlightModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -141,7 +143,10 @@
     <Content Include="Content\pictures\aeroflot.jpg" />
     <Content Include="Content\pictures\Boeing787.jpg" />
     <Content Include="Content\pictures\klmflight.jpg" />
+    <Content Include="Content\pictures\landing.png" />
     <Content Include="Content\pictures\luftganzaflight.jpg" />
+    <Content Include="Content\pictures\takeoff.png" />
+    <Content Include="Content\pictures\uareg.jpg" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -323,10 +328,14 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\TimeTable\Index.cshtml" />
     <Content Include="Scripts\jstemplate\README.md" />
+    <Content Include="Views\TimeTable\Passengers.cshtml" />
+    <Content Include="Views\TimeTable\Signin.cshtml" />
+    <Content Include="Views\TimeTable\Login.cshtml" />
+    <Content Include="Views\TimeTable\Runway.cshtml" />
+    <Content Include="Views\TimeTable\Newflight.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

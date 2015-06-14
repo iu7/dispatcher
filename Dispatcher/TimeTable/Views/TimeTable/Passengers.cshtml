@@ -1,0 +1,195 @@
+﻿@model List<TimeTable.Models.Flight> []
+@{
+    ViewBag.Title = "Passengers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<body class="metro">
+    <nav class="navigation-bar">
+        <div class="navigation-bar-content">
+            <a class="element"><span class="icon-grid-view"></span>Сайт аэропортовской службы</a>
+            <span class="element-divider"></span>
+            <a class="pull-menu" href="#"></a>
+            <ul class="element-menu">
+                <li>
+                    <a class="dropdown-toggle" href="#">На главную</a>
+                </li>
+            </ul>
+            <div class="no-tablet-portrait">
+                <span class="element-divider"></span>
+                <div class="element input-element">
+                    <form>
+                        <div class="input-control text">
+                            <input type="text" placeholder="Search...">
+                            <button class="btn-search"></button>
+                        </div>
+                    </form>
+                </div>
+                <span class="element-divider place-right"></span>
+                <button class="element image-button image-left place-right">
+                    Регистрация
+                </button>
+                <button class="element image-button image-left place-right">
+                    Войти
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="grid fluid">
+            <div class="row">
+                <div class="span6">
+                    <p class="subheader">Отправление</p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="text-left">Время</th>
+                                <th class="text-left">№ Рейса</th>
+                                <th class="text-left">Авиакомпания</th>
+                                <th class="text-left">Направление</th>
+                                <th class="text-left">Статус</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        @foreach (var item in @Model[1])
+                        {
+                            if (@item.Status == TimeTable.Models.FlightStatus.Отправлен)
+                            {
+                                <tr>
+                                    <td>@item.Time.ToString("HH:mm")</td>
+                                    <td class="right">@item.FlightNumber</td>
+                                    <td class="right">@item.AirCompany</td>
+                                    <td class="right">@item.ArrivalCity</td>
+                                    <td class="right">Отправлен</td>
+                                </tr>
+                            }
+                            if (@item.Status == TimeTable.Models.FlightStatus.Задержан)
+                            {
+                                <tr class ="warning">
+                                    <td>@item.Time.ToString("HH:mm")</td>
+                                    <td class="right">@item.FlightNumber</td>
+                                    <td class="right">@item.AirCompany</td>
+                                    <td class="right">@item.ArrivalCity</td>
+                                    <td class="right">Задержан</td>
+                                </tr>
+                            }
+                            if (@item.Status == TimeTable.Models.FlightStatus.Отменен)
+                            {
+                            <tr class="error">
+                                <td>@item.Time.ToString("HH:mm")</td>
+                                <td class="right">@item.FlightNumber</td>
+                                <td class="right">@item.AirCompany</td>
+                                <td class="right">@item.ArrivalCity</td>
+                                <td class="right">Отменен</td>
+                                </tr>
+                            }
+                            if (@item.Status == TimeTable.Models.FlightStatus.Ожидается)
+                            {
+                                <tr class="selected">
+                                    <td>@item.Time.ToString("HH:mm")</td>
+                                    <td class="right">@item.FlightNumber</td>
+                                    <td class="right">@item.AirCompany</td>
+                                    <td class="right">@item.ArrivalCity</td>
+                                    <td class="right">Ожидается</td>
+                                </tr>
+                        }
+                            if (@item.Status == TimeTable.Models.FlightStatus.Регистрация)
+                            {
+                                <tr class="info">
+                                <td>@item.Time.ToString("HH:mm")</td>
+                                <td class="right">@item.FlightNumber</td>
+                                <td class="right">@item.AirCompany</td>
+                                <td class="right">@item.ArrivalCity</td>
+                                <td class="right">Регистрация</td>
+                                </tr>
+							}
+							if (@item.Status == TimeTable.Models.FlightStatus.РегистрацияЗавершена)
+                            {
+								<tr class="success">
+                                <td>@item.Time.ToString("HH:mm")</td>
+                                <td class="right">@item.FlightNumber</td>
+                                <td class="right">@item.AirCompany</td>
+                                <td class="right">@item.ArrivalCity</td>
+                                <td class="right">Регистрация Завершена</td>
+                                </tr>
+                            }
+                        }
+						</tbody>
+                        <tfoot></tfoot>
+                    </table>
+                </div>
+                <div class="span6">
+                    <p class="subheader">Прибытие</p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="text-left">Время</th>
+                                <th class="text-left">№ Рейса</th>
+                                <th class="text-left">Авиакомпания</th>
+                                <th class="text-left">Направление</th>
+                                <th class="text-left">Статус</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        @foreach (var item in @Model[0])
+                        {
+                            if (@item.Status == TimeTable.Models.FlightStatus.Прибыл)
+                            {
+                                <tr>
+                                    <td>@item.Time.ToString("HH:mm")</td>
+                                    <td class="right">@item.FlightNumber</td>
+                                    <td class="right">@item.AirCompany</td>
+                                    <td class="right">@item.DepartureCity</td>
+                                    <td class="right">Прибыл</td>
+                                </tr>
+                            }
+                            if (@item.Status == TimeTable.Models.FlightStatus.Прибывает)
+                            {
+                                <tr class ="success">
+                                    <td>@item.Time.ToString("HH:mm")</td>
+                                    <td class="right">@item.FlightNumber</td>
+                                    <td class="right">@item.AirCompany</td>
+                                    <td class="right">@item.DepartureCity</td>
+                                    <td class="right">Прибывает</td>
+                                </tr>
+                            }
+                            if (@item.Status == TimeTable.Models.FlightStatus.Ожидается)
+                            {
+                                <tr class="selected">
+                                    <td>@item.Time.ToString("HH:mm")</td>
+                                    <td class="right">@item.FlightNumber</td>
+                                    <td class="right">@item.AirCompany</td>
+                                    <td class="right">@item.DepartureCity</td>
+                                    <td class="right">Ожидается</td>
+                                </tr>
+                            }
+                            if (@item.Status == TimeTable.Models.FlightStatus.Задержан)
+                            {
+                                <tr class="warning">
+                                    <td>@item.Time.ToString("HH:mm")</td>
+                                    <td class="right">@item.FlightNumber</td>
+                                    <td class="right">@item.AirCompany</td>
+                                    <td class="right">@item.DepartureCity</td>
+                                    <td class="right">Задержан</td>
+                                </tr>
+                            }
+                            if (@item.Status == TimeTable.Models.FlightStatus.Отменен)
+                            {
+                                <tr class="error">
+                                    <td>@item.Time.ToString("HH:mm")</td>
+                                    <td class="right">@item.FlightNumber</td>
+                                    <td class="right">@item.AirCompany</td>
+                                    <td class="right">@item.DepartureCity</td>
+                                    <td class="right">Отменен</td>
+                                </tr>
+                            }
+
+                        }
+                         </tbody>
+                        <tfoot></tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
