@@ -11,10 +11,10 @@
             <a class="pull-menu" href="#"></a>
             <ul class="element-menu">
                 <li>
-                    <a class="dropdown-toggle" href="#">На главную</a>
+                    <a class="dropdown-toggle" href="/Timetable">На главную</a>
                 </li>
                 <li>
-                    <a class="dropdown-toggle" href="#">Назначить рейс</a>
+                    <a class="dropdown-toggle" href="/Timetable/Newflight">Назначить рейс</a>
                 </li>
             </ul>
             <div class="no-tablet-portrait">
@@ -162,7 +162,7 @@
                                             <td class="right">@item.ArrivalCity</td>
                                             <td class="right">@item.Aircraft</td>
                                             <td class="right">Ожидается</td>
-                                            <td class="right"><button class="large">Начать регистрацию</button></td>
+                                            <td class="right"><button class="button inverse large">Начать регистрацию</button></td>
                                         }
                                         @if (@item.ArrivalCity == "Москва")
                                         {
@@ -175,7 +175,7 @@
                                             <td class="right">@item.DepartureCity</td>
                                             <td class="right">@item.Aircraft</td>
                                             <td class="right">Ожидается</td>
-                                            <td class="right"><button class="large">Принять</button></td>
+                                            <td class="right"><button class="button inverse large">Принять</button></td>
                                         }
                                     </tr>
                                 }
@@ -193,7 +193,7 @@
                                             <td class="right">@item.ArrivalCity</td>
                                             <td class="right">@item.Aircraft</td>
                                             <td class="right">Регистрация</td>
-                                            <td class="right"><button class="large">Завершить регистрацию</button></td>
+                                            <td class="right"><button class="button inverse large">Завершить регистрацию</button></td>
                                         }
                                         @if (@item.ArrivalCity == "Москва")
                                         {
@@ -224,7 +224,7 @@
                                             <td class="right">@item.ArrivalCity</td>
                                             <td class="right">@item.Aircraft</td>
                                             <td class="right">Регистрация завершена</td>
-                                            <td class="right"><button class="large">Готов к вылету</button></td>
+                                            <td class="right"><button class="button inverse large">Готов к вылету</button></td>
                                         }
                                         @if (@item.ArrivalCity == "Москва")
                                         {
