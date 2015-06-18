@@ -1,0 +1,78 @@
+﻿@model List<TimeTableFront.Models.Flight>
+@{
+    ViewBag.Title = "Passengers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<body class="metro">
+    <nav class="navigation-bar">
+        <div class="navigation-bar-content">
+            <a class="element"><span class="icon-grid-view"></span>Сайт аэропортовской службы</a>
+            <span class="element-divider"></span>
+            <a class="pull-menu" href="#"></a>
+            <ul class="element-menu">
+                <li>
+                    <a class="dropdown-toggle" href="/Timetable">На главную</a>
+                </li>
+            </ul>
+            <div class="no-tablet-portrait">
+                <span class="element-divider"></span>
+                <div class="element input-element">
+                    <form>
+                        <div class="input-control text">
+                            <input type="text" placeholder="Search...">
+                            <button class="btn-search"></button>
+                        </div>
+                    </form>
+                </div>
+                <span class="element-divider place-right"></span>
+                <button class="element image-button image-left place-right">
+                    Выход
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="grid">
+            <div class="row">
+                <div class="span8">
+                    <p class="item-title">Номер рейса</p>
+                    <div class="input-control text">
+                        <input type="text" value="" placeholder="Введите номер рейса XX-XXXX" />
+                        <button class="btn-clear"></button>
+                    </div>
+                    <p class="item-title">Авиакомпания</p>
+                    <div class="input-control select">
+                        <select>
+                            <option>АЭРОФЛОТ</option>
+                            <option>S7 AIRLINES</option>
+                            <option>LUFTHANZA</option>
+                            <option>OTHER</option>
+                        </select>
+                    </div>
+                    <p class="item-title">Отправление</p>
+                    <div class="input-control text">
+                        <input type="text" value="" placeholder="Аэропорт отправления" />
+                        <button class="btn-clear"></button>
+                    </div>
+                    <p class="item-title">Пункт назначения</p>
+                    <div class="input-control text">
+                        <input type="text" value="" placeholder="Пункт назначения" />
+                        <button class="btn-clear"></button>
+                    </div>
+                    <p class="item-title">Время (Плановое) отправления</p>
+                    <div class="input-control text">
+                        <input type="text" value="" placeholder="Время отправления" />
+                        <button class="btn-clear"></button>
+                    </div>
+                    <p class="item-title">Время (Ожидаемое) прибытия</p>
+                    <div class="input-control text">
+                        <input type="text" value="" placeholder="Время прибытия" />
+                        <button class="btn-clear"></button>
+                    </div>
+                    <button class="large">OK</button>
+                    <button class="large">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

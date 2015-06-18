@@ -11,7 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "weather", "weather\weather.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APITest", "APITest\APITest.csproj", "{E613AE2C-1DE5-4F1F-BE26-1129429373D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTable", "TimeTable\TimeTable.csproj", "{5A51514D-B5A8-4F3D-A55B-7C97EE461B0D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "timetable", "timetable\timetable.csproj", "{BA15BE40-1528-4A0D-9290-B687AA42C0AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTableFront", "TimeTableFront\TimeTableFront.csproj", "{5A51514D-B5A8-4F3D-A55B-7C97EE461B0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{E613AE2C-1DE5-4F1F-BE26-1129429373D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E613AE2C-1DE5-4F1F-BE26-1129429373D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E613AE2C-1DE5-4F1F-BE26-1129429373D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA15BE40-1528-4A0D-9290-B687AA42C0AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA15BE40-1528-4A0D-9290-B687AA42C0AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA15BE40-1528-4A0D-9290-B687AA42C0AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA15BE40-1528-4A0D-9290-B687AA42C0AB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5A51514D-B5A8-4F3D-A55B-7C97EE461B0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5A51514D-B5A8-4F3D-A55B-7C97EE461B0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A51514D-B5A8-4F3D-A55B-7C97EE461B0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
