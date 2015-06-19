@@ -58,9 +58,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Dispatcher\Dispatcher.csproj">
+    <ProjectReference Include="..\Dispatcher\DispatcherFront.csproj">
       <Project>{b482b926-ad46-40b8-892b-32482fc8cbe6}</Project>
-      <Name>Dispatcher</Name>
+      <Name>DispatcherFront</Name>
     </ProjectReference>
     <ProjectReference Include="..\weather\weather.csproj">
       <Project>{acde2aa4-9dd8-4583-b950-8a3fb368cfda}</Project>
