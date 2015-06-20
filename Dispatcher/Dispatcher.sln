@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DispatcherFront", "Dispatcher\DispatcherFront.csproj", "{B482B926-AD46-40B8-892B-32482FC8CBE6}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "timetable", "timetable\timetable.csproj", "{BA15BE40-1528-4A0D-9290-B687AA42C0AB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTableFront", "TimeTableFront\TimeTableFront.csproj", "{5A51514D-B5A8-4F3D-A55B-7C97EE461B0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Status", "Status\Status.csproj", "{9B15BEC0-4F08-4221-A946-99A1B6B9D5D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{5A51514D-B5A8-4F3D-A55B-7C97EE461B0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A51514D-B5A8-4F3D-A55B-7C97EE461B0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A51514D-B5A8-4F3D-A55B-7C97EE461B0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B15BEC0-4F08-4221-A946-99A1B6B9D5D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B15BEC0-4F08-4221-A946-99A1B6B9D5D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B15BEC0-4F08-4221-A946-99A1B6B9D5D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B15BEC0-4F08-4221-A946-99A1B6B9D5D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
