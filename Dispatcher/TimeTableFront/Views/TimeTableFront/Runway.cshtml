@@ -1,4 +1,4 @@
-﻿@model System.Collections.Generic.List<TimeTableFront.Models.Flight>
+﻿@model Tuple<System.Collections.Generic.List<TimeTableFront.ront.Models.FlightInfo>, String name>
 @{
     ViewBag.Title = "Passengers";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -11,10 +11,10 @@
             <a class="pull-menu" href="#"></a>
             <ul class="element-menu">
                 <li>
-                    <a class="dropdown-toggle" href="/Timetable">На главную</a>
+                    <a class="dropdown-toggle" href="/Index.>На главную</a>
                 </li>
                 <li>
-                    <a class="dropdown-toggle" href="/Timetable/Newflight">Назначить рейс</a>
+                    <a class="dropdown-toggle" href="/TimeTableFront.Newflight">Назначить рейс</a>
                 </li>
             </ul>
             <div class="no-tablet-portrait">
@@ -29,7 +29,10 @@
                 </div>
                 <span class="element-divider place-right"></span>
                 <button class="element image-button image-left place-right">
-                    Выход    
+                    Выход
+                </button>
+                <button class="element image-button image-left place-right">
+                    @Model.Item2
                 </button>
             </div>
         </div>
@@ -53,9 +56,9 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach (var item in @Model)
+                            @foreach (var item in @Model.Item1)
                             {
-                                if (@item.Status == TimeTable.Models.FlightStatus.Отправлен)
+                                if (@item.Status == TimeTableFront.Models.FlightStatus.Отправлен)
                                 {
                                     <tr>
                                         @if (@item.DepartureCity == "Москва")
@@ -86,7 +89,7 @@
                                         }
                                     </tr>
                                 }
-                                if (@item.Status == TimeTable.Models.FlightStatus.Задержан)
+                                if (@item.Status == TimeTableFront.Models.FlightStatus.Задержан)
                                 {
                                     <tr class="warning">
                                         @if (@item.DepartureCity == "Москва")
@@ -117,7 +120,7 @@
                                         }
                                     </tr>
                                 }
-                                if (@item.Status == TimeTable.Models.FlightStatus.Отменен)
+                                if (@item.Status == TimeTableFront.Models.FlightStatus.Отменен)
                                 {
                                     <tr class="error">
                                         @if (@item.DepartureCity == "Москва")
@@ -148,7 +151,7 @@
                                         }
                                     </tr>
                                 }
-                                if (@item.Status == TimeTable.Models.FlightStatus.Ожидается)
+                                if (@item.Status == TimeTableFront.Models.FlightStatus.Ожидается)
                                 {
                                     <tr class="selected">
                                         @if (@item.DepartureCity == "Москва")
@@ -179,7 +182,7 @@
                                         }
                                     </tr>
                                 }
-                                if (@item.Status == TimeTable.Models.FlightStatus.Регистрация)
+                                if (@item.Status == TimeTableFront.Models.FlightStatus.Регистрация)
                                 {
                                     <tr class="info">
                                         @if (@item.DepartureCity == "Москва")
@@ -210,7 +213,7 @@
                                         }
                                     </tr>
                                 }
-                                if (@item.Status == TimeTable.Models.FlightStatus.РегистрацияЗавершена)
+                                if (@item.Status == TimeTableFront.Models.FlightStatus.РегистрацияЗавершена)
                                 {
                                     <tr class="success">
                                         @if (@item.DepartureCity == "Москва")
@@ -229,7 +232,7 @@
                                         @if (@item.ArrivalCity == "Москва")
                                         {
                                             <td>
-                                                <img src="@Url.Content("~/Content/pictures/landing.png")" >
+                                                <img src="@Url.Content("~/Content/pictures/landing.png")">
                                             </td>
                                             <td>@item.Time.ToString("HH:mm")</td>
                                             <td class="right">@item.FlightNumber</td>
