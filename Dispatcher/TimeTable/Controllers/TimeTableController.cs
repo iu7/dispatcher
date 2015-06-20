@@ -10,6 +10,7 @@ namespace timetable.Controllers
     public class TimeTableController : ApiController
     {
         private Models.TimeTableEntities db = new Models.TimeTableEntities();
+        private Models.TimeTableEntities1 dbSt = new Models.TimeTableEntities1();
 
         public Object Get()
         {
@@ -17,7 +18,8 @@ namespace timetable.Controllers
             var shortflights = new List<Flight>();
             foreach (var f in flights)
             {
-                var sf = new Flight(f, db);
+                var status = (FlightStatus)dbSt.Status.Find(f.FlightID).Status1;
+                var sf = new Flight(f, db, status);
                 shortflights.Add(sf);
             }
             var js = (new System.Web.Script.Serialization.JavaScriptSerializer()).Serialize(shortflights);
@@ -54,7 +56,10 @@ namespace timetable.Controllers
                     var flights = db.Flights.Where(f => f.ArrivalTime.Day == day.Day && f.ArrivalTime.Month == day.Month && f.Destination == 1).ToList();
                     var shortf = new List<Flight>();
                     foreach (var f in flights)
-                        shortf.Add(new Flight(f, db));
+                    {
+                        var status = (FlightStatus)dbSt.Status.Find(f.FlightID).Status1;
+                        shortf.Add(new Flight(f, db, status));
+                    }
                     js = (new System.Web.Script.Serialization.JavaScriptSerializer()).Serialize(shortf);
                     msg = new HttpResponseMessage();
                     msg.Content = new StringContent(js, System.Text.Encoding.UTF8);
@@ -64,7 +69,10 @@ namespace timetable.Controllers
                     var flights1 = db.Flights.Where(f => f.Origin == 1 && f.DepartureTime.Month == day.Month && f.DepartureTime.Day == day.Day).ToList();
                     var shortf1 = new List<Flight>();
                     foreach (var f in flights1)
-                        shortf1.Add(new Flight(f, db));
+                    {
+                        var status = (FlightStatus)dbSt.Status.Find(f.FlightID).Status1;
+                        shortf1.Add(new Flight(f, db, status));
+                    }
                     js = (new System.Web.Script.Serialization.JavaScriptSerializer()).Serialize(shortf1);
                     msg = new HttpResponseMessage();
                     msg.Content = new StringContent(js, System.Text.Encoding.UTF8);
@@ -72,24 +80,6 @@ namespace timetable.Controllers
             }
             return "error";
         }
-
-        /*public Object Get(string i)
-        {
-            var flights = db.Flights.Where(f => f.ArrivalTime == DateTime.Today && f.Destination == 1).ToList();
-            var js = (new System.Web.Script.Serialization.JavaScriptSerializer()).Serialize(flights);
-            var msg = new HttpResponseMessage();
-            msg.Content = new StringContent(js, System.Text.Encoding.UTF8);
-            return msg;
-        }
-
-        public Object GetDeparture()
-        {
-            var flights = db.Flights.Where(f => f.DepartureTime == DateTime.Today && f.Origin==1).ToList();
-            var js = (new System.Web.Script.Serialization.JavaScriptSerializer()).Serialize(flights);
-            var msg = new HttpResponseMessage();
-            msg.Content = new StringContent(js, System.Text.Encoding.UTF8);
-            return msg;
-        }*/
 
         public Object Get(string date)
         {
@@ -174,6 +164,25 @@ namespace timetable.Controllers
         }
 
     }
+    
+    // copied from Status.Controllers
+    public enum FlightStatus
+    {
+        Ожидается,
+        НачалоРегистрации,
+        ЗавершениеРегистрации,
+        НаРулежнойДорожке,
+        НазначенВзлетныйКурс,
+        ВылетРазрешен,
+        Отправлен,
+        ВылетОжидается,
+        ПосадкаОжидается,
+        Задержан,
+        Отменен,
+        ПосадкаРазрешена,
+        Прибыл
+    }
+
 
     public class Flight
     {
@@ -184,8 +193,9 @@ namespace timetable.Controllers
         public String Destination;
         public String Airplane;
         public String Number;
+        public FlightStatus Status;
 
-        public Flight (Models.Flights f, Models.TimeTableEntities db)
+        public Flight (Models.Flights f, Models.TimeTableEntities db, FlightStatus st)
         {
             id = f.FlightID;
             Arrival = f.ArrivalTime;
@@ -194,6 +204,7 @@ namespace timetable.Controllers
             Destination = db.Airports.Find(f.Destination).Title;
             Airplane = db.Airplanes.Find(f.AirplaneID).AirplaneType;
             Number = f.FlightNumber;
+            Status = st;
         }
     }
 }
